@@ -33,4 +33,4 @@ crocwork Motion is young and in alpha. It cannot open After Effects projects (`.
 
 ## Get help
 
-Ask in [Discord](https://github.com/CROC101/crocwork-motion) or open an issue in the [issue tracker](https://github.com/CROC101/crocwork-motion). Say which version and which system you use.
+Ask in [Discord](https://discord.gg/sNYsVbh3v) or open an issue in the [issue tracker](https://github.com/CROC101/crocwork-motion). Say which version and which system you use.

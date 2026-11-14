@@ -160,7 +160,7 @@ reproduce an image (for example, point lists traced from someone else's icon).
 - **Property tree:** everything animatable is a `Property` in the layer's `PropGroup` tree, addressed by paths (`transform/position`, `effects/#1/blurriness`, `@uid`).
 - **Everything is a command** (`crates/engine`): id, label, menu path, shortcut, params, enabled(), run(). UI, CLI, control channel and MCP dispatch by id.
 - **Everything is agent-drivable:** every interactive widget registers an automation id; UI state is serde.
-- **Community links** (Help menu, About, header Discord button): https://github.com/CROC101/crocwork-motion, https://github.com/CROC101/crocwork-motion, https://github.com/CROC101/crocwork-motion, https://github.com/CROC101/crocwork-motion.
+- **Community links** (Help menu, About, header Discord button): https://discord.gg/sNYsVbh3v, https://github.com/CROC101/crocwork-motion, https://github.com/CROC101/crocwork-motion, https://github.com/CROC101/crocwork-motion.
 - **Quality gates** before every commit: `cargo xtask ci` (fmt, clippy -D warnings, tests, layers, assets, wasm).
 - New workspace crates include `[lints] workspace = true` in `Cargo.toml`. Production crate roots declare the crate-level lint attributes before modules; crate-level `//!` documentation may precede them.
 - **Commits:** one task id per commit (`M6.3: trim paths`). Only green states.

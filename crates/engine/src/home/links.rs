@@ -3,7 +3,7 @@
 
 pub const APP_NAME: &str = "crocwork Motion";
 pub const APP_SLUG: &str = "effectcraft";
-pub const DISCORD: &str = "https://github.com/CROC101/crocwork-motion";
+pub const DISCORD: &str = "https://discord.gg/sNYsVbh3v";
 pub const WEBSITE: &str = "https://github.com/CROC101/crocwork-motion";
 pub const APP_PAGE: &str = "https://github.com/CROC101/crocwork-motion";
 pub const GITHUB: &str = "https://github.com/CROC101/crocwork-motion";

@@ -105,5 +105,5 @@ rustflags = ["-C", "link-self-contained=yes", "-L", "native=C:/gnu-import-libs"]
 
 ## Talk to us
 
-Questions, ideas and bug reports are welcome on [Discord](https://github.com/CROC101/crocwork-motion) and in
+Questions, ideas and bug reports are welcome on [Discord](https://discord.gg/sNYsVbh3v) and in
 GitHub issues.

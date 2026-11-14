@@ -32,4 +32,4 @@ Projects built with the command-line tool or an agent can use relative paths suc
 
 ## Still stuck?
 
-Ask in [Discord](https://github.com/CROC101/crocwork-motion) or open an issue in the [issue tracker](https://github.com/CROC101/crocwork-motion). Say which system you use, whether the project came from another computer or from the command-line tool, and where the footage is stored.
+Ask in [Discord](https://discord.gg/sNYsVbh3v) or open an issue in the [issue tracker](https://github.com/CROC101/crocwork-motion). Say which system you use, whether the project came from another computer or from the command-line tool, and where the footage is stored.
