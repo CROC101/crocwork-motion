@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build and package EffectCraft for Linux (<arch> is x86_64 or aarch64, or riscv64 when cross-compiling):
+# Build and package crocwork Motion for Linux (<arch> is x86_64 or aarch64, or riscv64 when cross-compiling):
 #
 #   $DIST/effectcraft-<version>-linux-<arch>.AppImage  any distro with glibc >= the build host's
 #   $DIST/effectcraft-<version>-linux-<arch>.AppImage.zsync  delta updates (needs zsyncmake)
@@ -41,10 +41,10 @@ case "$ARCH" in
   aarch64 | arm64) ARCH=aarch64; DEB_ARCH=arm64 ;;
   *) echo "unsupported architecture $ARCH" >&2; exit 2 ;;
 esac
-export EFFECTCRAFT_MAINTAINER="${EFFECTCRAFT_MAINTAINER:-EffectCraft maintainers <effectcraft@storyteller.ai>}"
+export EFFECTCRAFT_MAINTAINER="${EFFECTCRAFT_MAINTAINER:-crocwork Motion maintainers <effectcraft@storyteller.ai>}"
 BASENAME="effectcraft-$VERSION-linux-$ARCH"
 
-echo "==> EffectCraft $VERSION for Linux $ARCH ($FORMATS)"
+echo "==> crocwork Motion $VERSION for Linux $ARCH ($FORMATS)"
 
 if [[ "$SKIP_BUILD" = 0 ]]; then
   if [[ -n "${CROSS_TARGET:-}" ]]; then
@@ -128,7 +128,7 @@ if has appimage; then
     echo "no pinned AppImage runtime for $ARCH; build the AppImage on x86_64 or aarch64" >&2
     exit 2
   fi
-  APPDIR="$WORK/EffectCraft.AppDir"
+  APPDIR="$WORK/crocwork Motion.AppDir"
   cp -R "$STAGE" "$APPDIR"
   # Keep sctk-adwaita's MIT notice in the AppImage.
   install -Dm644 "$ROOT/NOTICE" "$APPDIR/usr/share/doc/effectcraft/NOTICE"

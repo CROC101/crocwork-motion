@@ -1,4 +1,4 @@
-# EffectCraft — the desktop app (`effectcraft`) and the CLI/MCP server (`effectcraft-cli`), built from this
+# crocwork Motion — the desktop app (`effectcraft`) and the CLI/MCP server (`effectcraft-cli`), built from this
 # repository:
 #
 #   nix build          # → ./result/bin/effectcraft, ./result/bin/effectcraft-cli
@@ -7,7 +7,7 @@
 #   * `Cargo.lock` drives the dependencies (`cargoLock`), so there is no vendorHash to bump. The
 #     git sources (storytold/craft-libs, storytold/filmcraft) are fetched at the revision the lock file pins;
 #   * the desktop file, hicolor icons, MIME types and AppStream metadata are the same files the
-#     .deb/.rpm ship (packaging/linux/), so `apt` and NixOS users see one identical EffectCraft;
+#     .deb/.rpm ship (packaging/linux/), so `apt` and NixOS users see one identical crocwork Motion;
 #   * `doCheck` is off: the test suite needs corpora and a GPU the Nix sandbox cannot provide
 #     (`cargo xtask ci` is the gate). `pkgs.effectcraft.overrideAttrs { doCheck = true; }` runs it.
 #
@@ -183,11 +183,11 @@ rustPlatform.buildRustPackage {
   meta = {
     description = "Motion graphics and visual effects application";
     longDescription = ''
-      EffectCraft is a motion graphics and visual effects application: compositions, keyframes,
+      crocwork Motion is a motion graphics and visual effects application: compositions, keyframes,
       effects and rendering. It ships with effectcraft-cli, a headless renderer, command runner and
       MCP server for AI agents.
     '';
-    homepage = "https://getartcraft.com/apps/effectcraft";
+    homepage = "https://github.com/CROC101/crocwork-motion";
     license = with lib.licenses; [
       mit
       asl20

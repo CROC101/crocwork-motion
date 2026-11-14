@@ -1,4 +1,4 @@
-//! Lottie document → EffectCraft compositions (the inverse of [`crate::export`]).
+//! Lottie document → crocwork Motion compositions (the inverse of [`crate::export`]).
 
 use std::collections::{BTreeMap, HashMap};
 use std::sync::Arc;

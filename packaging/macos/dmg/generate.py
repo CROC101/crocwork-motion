@@ -20,7 +20,7 @@ from mac_alias import Alias, TargetInfo, VolumeInfo
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 # Keep in sync with package.sh (volume name) and README.md (layout).
-VOLUME = "EffectCraft"
+VOLUME = "crocwork Motion"
 WIDTH, HEIGHT = 660, 400  # window content, pt; the background's 1x size
 TITLE_BAR = 32
 ICON_SIZE = 128

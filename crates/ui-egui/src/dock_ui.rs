@@ -1,7 +1,7 @@
-//! EffectCraft's panels in craft-ui's shared docking. craft-ui draws the frames, tab strips,
+//! crocwork Motion's panels in craft-ui's shared docking. craft-ui draws the frames, tab strips,
 //! stacked panels, floating windows, dividers and drop previews and owns the gestures (drag a tab
 //! onto a group to tab it there or split it off to a side; hold Cmd/Ctrl at the release, or drop
-//! outside every group, to float it). EffectCraft draws the panel bodies, the ≡ panel menu, the
+//! outside every group, to float it). crocwork Motion draws the panel bodies, the ≡ panel menu, the
 //! Timeline's comp tabs and the viewer locks in each group header, and runs every layout change
 //! through its command path (`window.dockAction`), so pointer, menu and control-channel changes
 //! share one route.
@@ -122,7 +122,7 @@ pub(crate) fn route(app: &mut EffectcraftApp, ctx: &egui::Context, id: &str, par
             let mut tagged = if params.is_object() { params.clone() } else { json!({}) };
             if let Some(fields) = tagged.as_object_mut() {
                 fields.insert("command".into(), json!(id));
-                // EffectCraft's panel names ("Effect Controls") as well as craft-ui's ids.
+                // crocwork Motion's panel names ("Effect Controls") as well as craft-ui's ids.
                 for key in ["panel", "anchor", "before"] {
                     if let Some(name) = fields.get(key).and_then(Value::as_str) {
                         let panel = PanelKind::from_name(name).ok_or(format!("unknown panel `{name}`"))?;
@@ -156,7 +156,7 @@ impl EffectcraftApp {
     }
 
     /// Run a craft-ui docking command on the current workspace, all or nothing. Named
-    /// workspaces and Reset are EffectCraft's own (`window.workspace`, `window.resetWorkspace`).
+    /// workspaces and Reset are crocwork Motion's own (`window.workspace`, `window.resetWorkspace`).
     pub(crate) fn run_dock_command(&mut self, ctx: &egui::Context, command: DockCommand<PanelKind>) -> Result<(), String> {
         if let DockCommand::Layout { action } | DockCommand::UiDock(UiDock::Action { action }) = &command {
             check_raw_action(action)?;
@@ -169,7 +169,7 @@ impl EffectcraftApp {
             }
             return Err("use the window.workspace commands for named workspaces".into());
         }
-        // A closed panel opens through EffectCraft's own path, which puts it in its usual place
+        // A closed panel opens through crocwork Motion's own path, which puts it in its usual place
         // and runs the viewer and ScriptUI lifecycles.
         let shown = match &command {
             DockCommand::Activate { panel } | DockCommand::UiDock(UiDock::Operation(craft_ui::docking::DockOperation::Open { panel })) => Some(*panel),
@@ -644,7 +644,7 @@ fn has_lock(panel: PanelKind) -> bool {
     matches!(panel, PanelKind::Composition | PanelKind::Viewer(_) | PanelKind::Timeline)
 }
 
-/// EffectCraft's side of the dock area for one frame.
+/// crocwork Motion's side of the dock area for one frame.
 struct EffectContent<'a> {
     app: &'a mut EffectcraftApp,
     tokens: Tokens,

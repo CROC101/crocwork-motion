@@ -141,8 +141,8 @@ pub fn stop_helpers() {
     effectcraft_helper_host::stop_all();
 }
 
-/// The platform config directory for EffectCraft (`EFFECTCRAFT_CONFIG_DIR` overrides):
-/// `~/Library/Application Support/EffectCraft` (macOS), `%APPDATA%\EffectCraft` (Windows),
+/// The platform config directory for crocwork Motion (`EFFECTCRAFT_CONFIG_DIR` overrides):
+/// `~/Library/Application Support/crocwork Motion` (macOS), `%APPDATA%\crocwork Motion` (Windows),
 /// `$XDG_CONFIG_HOME/effectcraft` or `~/.config/effectcraft` (Linux and others). A `portable.txt`
 /// beside the executable puts it in `EffectCraftData` there instead ([`app_dirs`]).
 pub fn config_dir() -> Option<std::path::PathBuf> {

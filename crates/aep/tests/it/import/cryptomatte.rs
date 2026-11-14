@@ -1,4 +1,4 @@
-//! The Cryptomatte plug-in (match name `Cryptomatte`) arrives as EffectCraft's Cryptomatte
+//! The Cryptomatte plug-in (match name `Cryptomatte`) arrives as crocwork Motion's Cryptomatte
 //! (`ec.3d.cryptomatte`): the layer and selection from its Settings data, Output as Display and
 //! Matte Only. The effect is built into the committed `synthetic.aep` in place of its Glow, in
 //! the layout docs/aep-format.md 3.7 describes (made-up layer names and ID hashes).
@@ -207,10 +207,10 @@ fn cryptomatte_arrives_with_its_layer_selection_and_output() {
     let (g, r) = run(&Crypto { settings: Some(settings("Layer_A", sel)), output: Some(3), selection_mode: None, borrowed: false, items: Some(OUTPUT) });
     assert_eq!(losses(&r, LossCategory::Effects), Vec::<String>::new());
     assert_eq!(losses(&r, LossCategory::DamagedData), Vec::<String>::new());
-    let g = g.expect("an EffectCraft Cryptomatte");
+    let g = g.expect("an crocwork Motion Cryptomatte");
     // Matted RGBA: the layer keyed by the selection.
     assert_eq!((v(&g, "layerName"), v(&g, "selection"), v(&g, "display"), v(&g, "matteOnly")), (str("Layer_A"), str(sel), Value::Enum(1), Value::Bool(false)));
-    // The selection's `<hex>` tokens are EffectCraft's own grammar.
+    // The selection's `<hex>` tokens are crocwork Motion's own grammar.
     assert_eq!(effectcraft_effects::selection_hashes(sel, None), vec![0x2a, 0xdead_beef]);
 }
 
@@ -289,7 +289,7 @@ fn cryptomatte_output_maps_by_item_name() {
         items: Some(&["colors", "MATTE ONLY", "Matted RGBA", "Matted Colors"]),
     });
     assert_eq!((v(&g.expect("effect"), "matteOnly")), Value::Bool(true));
-    // An item EffectCraft does not know: reported, Colors used.
+    // An item crocwork Motion does not know: reported, Colors used.
     let (g, r) = run(&Crypto {
         settings: None,
         output: Some(2),
@@ -440,7 +440,7 @@ fn the_after_effects_sample_arrives_as_after_effects_shows_it() {
         }
     }
     assert_eq!(found.len(), 3, "{found:?}");
-    // The picked tokens are the manifest's hashes, which are the hashes of the names: EffectCraft
+    // The picked tokens are the manifest's hashes, which are the hashes of the names: crocwork Motion
     // reads `<11a97486>` and `box_red` as the same object.
     for (name, token) in [("box_red", "<11a97486>"), ("mat_paint", "<a5deeb9e>")] {
         assert_eq!(effectcraft_effects::selection_hashes(token, None), effectcraft_effects::selection_hashes(name, None), "{name}");

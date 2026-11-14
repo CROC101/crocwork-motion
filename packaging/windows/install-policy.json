@@ -1,7 +1,7 @@
 {
   "id": "effectcraft",
-  "name": "EffectCraft",
-  "upgradeCode": "AACA8593-C6ED-40A8-BA6C-CB325D8529F9",
+  "name": "crocwork Motion",
+  "upgradeCode": "34FFC3AD-D543-515D-8F13-B29F3E6C3D0A",
   "sources": [
     "effectcraft.wxs",
     "installer-ui.wxs"
@@ -29,13 +29,13 @@
     ],
     [
       "-1",
-      "Software\\EffectCraft",
+      "Software\\crocwork Motion",
       "DesktopShortcut",
       "[DESKTOPSHORTCUT]"
     ],
     [
       "-1",
-      "Software\\EffectCraft",
+      "Software\\crocwork Motion",
       "DesktopShortcut",
       "1"
     ]

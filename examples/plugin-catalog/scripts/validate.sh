@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Validate the plug-in catalog: schema, unique ids, every release's download (size + SHA-256),
-# then install every package with the real EffectCraft loader.
+# then install every package with the real crocwork Motion loader.
 #
 #   scripts/validate.sh [index.json]
 #
@@ -58,7 +58,7 @@ done < <(jq -r '.packages | to_entries[] | .key as $p | .value as $pkg | $pkg.ve
   | [$p, .key, $pkg.id, .value.version, .value.url, .value.sha256, (.value.size // "")] | @tsv' "$catalog")
 echo "ok"
 
-echo "== 4. load with EffectCraft"
+echo "== 4. load with crocwork Motion"
 if [[ -z "${EFFECTCRAFT_CLI:-}" ]]; then
   echo "skipped (set EFFECTCRAFT_CLI to an effectcraft-cli build)"
   exit 0

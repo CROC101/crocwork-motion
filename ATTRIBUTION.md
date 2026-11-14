@@ -37,7 +37,7 @@ and licence texts are in [`NOTICE`](NOTICE).
 | `assets/fonts/NotoSansSymbols2-Regular.ttf` | The Noto Project Authors | https://github.com/notofonts/symbols | OFL-1.1 (`assets/fonts/OFL-NotoSansSymbols2.txt`) |
 | `assets/fonts/JetBrainsMono-Regular.ttf` | The JetBrains Mono Project Authors | https://github.com/JetBrains/JetBrainsMono | OFL-1.1 (`assets/fonts/OFL-JetBrainsMono.txt`) |
 | `apps/effectcraft-web/web/favicon.svg` | EffectCraft contributors | Original work: web app icon, a copy of `assets/app-icon/effectcraft-small.svg` (the unicorn app icon) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
-| `packaging/macos/dmg/background.svg` | @XusBadia | Original work: macOS DMG Finder window background, derived from the EffectCraft app icon (`assets/app-icon/effectcraft.svg`); rendered to a TIFF by `packaging/macos/package.sh` at package time | MIT OR Apache-2.0 (`LICENSE-MIT`, `LICENSE-APACHE`) |
+| `packaging/macos/dmg/background.svg` | @XusBadia | Original work: macOS DMG Finder window background, derived from the crocwork Motion app icon (`assets/app-icon/effectcraft.svg`); rendered to a TIFF by `packaging/macos/package.sh` at package time | MIT OR Apache-2.0 (`LICENSE-MIT`, `LICENSE-APACHE`) |
 | `assets/app-icon/effectcraft-1024.png` | EffectCraft contributors | Original work: effectCraft app icon, 1024 px (owner's ArtCraft unicorn drawing, vectorised) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
 | `assets/app-icon/effectcraft-macos-512.png` | EffectCraft contributors | Original work: effectCraft runtime Dock icon (macOS) (owner's ArtCraft unicorn drawing, vectorised) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
 | `assets/app-icon/effectcraft-small.svg` | EffectCraft contributors | Original work: effectCraft app icon, light vector (owner's ArtCraft unicorn drawing, vectorised) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
@@ -68,7 +68,7 @@ Three small After Effects test projects of `crates/aep` are in this repository: 
 
 ## Screenshots
 
-Screenshots of EffectCraft itself, rendered headlessly, showing only procedurally generated demo content.
+Screenshots of crocwork Motion itself, rendered headlessly, showing only procedurally generated demo content.
 
 | Asset | Author | Source | Licence |
 |---|---|---|---|
@@ -117,7 +117,7 @@ affiliated with or endorsed by their authors.
 
 ## Formats and parameters from other open-source projects
 
-Written in Rust for EffectCraft; no code is copied. They follow published specifications and
+Written in Rust for crocwork Motion; no code is copied. They follow published specifications and
 configuration from these Apache-2.0 projects:
 
 - `crates/segment/src/tflite.rs` reads TensorFlow Lite files using the field layout of TensorFlow
@@ -133,26 +133,26 @@ configuration from these Apache-2.0 projects:
 
 | Asset | Author | Source | Licence |
 |---|---|---|---|
-| `crates/engine/src/tests/fixtures/analysed-0.24.ecproj` | arnav-hiwarkar | Original work, synthetic project keyed by EffectCraft 0.24.1 | MIT OR Apache-2.0 |
-| `crates/engine/src/tests/fixtures/object-matte-0.22.ecproj` | lisn0 | Original work, synthetic project saved by EffectCraft 0.22.0 | MIT OR Apache-2.0 |
-| `crates/engine/src/tests/fixtures/tracked-0.22.ecproj` | arnav-hiwarkar | Original work, synthetic project saved by EffectCraft 0.22.0 | MIT OR Apache-2.0 |
+| `crates/engine/src/tests/fixtures/analysed-0.24.ecproj` | arnav-hiwarkar | Original work, synthetic project keyed by crocwork Motion 0.24.1 | MIT OR Apache-2.0 |
+| `crates/engine/src/tests/fixtures/object-matte-0.22.ecproj` | lisn0 | Original work, synthetic project saved by crocwork Motion 0.22.0 | MIT OR Apache-2.0 |
+| `crates/engine/src/tests/fixtures/tracked-0.22.ecproj` | arnav-hiwarkar | Original work, synthetic project saved by crocwork Motion 0.22.0 | MIT OR Apache-2.0 |
 
 ## First-party brand marks
 
-The ArtCraft name, wordmark and logos are trademarks of the ArtCraft Team. They are not open source and are not
-covered by the project licence; they may be used only unmodified and only as part of this repository and EffectCraft,
+The crocwork name, wordmark and logos are trademarks of the crocwork Team. They are not open source and are not
+covered by the project licence; they may be used only unmodified and only as part of this repository and crocwork Motion,
 under [`docs/brand/LICENSE-brand.txt`](docs/brand/LICENSE-brand.txt). Forks and modified versions must remove them
 (AGENTS.md §1.8).
 
 | File | Author | Source | Licence |
 |---|---|---|---|
-| `docs/brand/artcraft-logo-white.png` | ArtCraft Team | Original work: first-party ArtCraft brand mark (ArtCraft wordmark, light ink for dark backgrounds) | ArtCraft brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
-| `docs/brand/artcraft-logo-white.svg` | ArtCraft Team | Original work: first-party ArtCraft brand mark (ArtCraft wordmark, light ink for dark backgrounds) | ArtCraft brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
-| `docs/brand/artcraft-logo.png` | ArtCraft Team | Original work: first-party ArtCraft brand mark (ArtCraft wordmark (symbol + "ARTCRAFT"), dark ink for light backgrounds) | ArtCraft brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
-| `docs/brand/artcraft-logo.svg` | ArtCraft Team | Original work: first-party ArtCraft brand mark (ArtCraft wordmark (symbol + "ARTCRAFT"), dark ink for light backgrounds) | ArtCraft brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
-| `docs/brand/artcraft-mark-black.png` | ArtCraft Team | Original work: first-party ArtCraft brand mark (ArtCraft symbol ("A" mark), black) | ArtCraft brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
-| `docs/brand/artcraft-mark-black.svg` | ArtCraft Team | Original work: first-party ArtCraft brand mark (ArtCraft symbol ("A" mark), black) | ArtCraft brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
-| `docs/brand/artcraft-mark.png` | ArtCraft Team | Original work: first-party ArtCraft brand mark (ArtCraft symbol ("A" mark), blue) | ArtCraft brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
-| `docs/brand/artcraft-mark.svg` | ArtCraft Team | Original work: first-party ArtCraft brand mark (ArtCraft symbol ("A" mark), blue) | ArtCraft brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
+| `docs/brand/artcraft-logo-white.png` | crocwork Team | Original work: first-party crocwork brand mark (crocwork wordmark, light ink for dark backgrounds) | crocwork brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
+| `docs/brand/artcraft-logo-white.svg` | crocwork Team | Original work: first-party crocwork brand mark (crocwork wordmark, light ink for dark backgrounds) | crocwork brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
+| `docs/brand/artcraft-logo.png` | crocwork Team | Original work: first-party crocwork brand mark (crocwork wordmark (symbol + "ARTCRAFT"), dark ink for light backgrounds) | crocwork brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
+| `docs/brand/artcraft-logo.svg` | crocwork Team | Original work: first-party crocwork brand mark (crocwork wordmark (symbol + "ARTCRAFT"), dark ink for light backgrounds) | crocwork brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
+| `docs/brand/artcraft-mark-black.png` | crocwork Team | Original work: first-party crocwork brand mark (crocwork symbol ("A" mark), black) | crocwork brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
+| `docs/brand/artcraft-mark-black.svg` | crocwork Team | Original work: first-party crocwork brand mark (crocwork symbol ("A" mark), black) | crocwork brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
+| `docs/brand/artcraft-mark.png` | crocwork Team | Original work: first-party crocwork brand mark (crocwork symbol ("A" mark), blue) | crocwork brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
+| `docs/brand/artcraft-mark.svg` | crocwork Team | Original work: first-party crocwork brand mark (crocwork symbol ("A" mark), blue) | crocwork brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
 
 - Appearance theme previews, drawn procedurally from original shapes: `crates/ui-egui/src/panels/settings.rs` (original work, MIT OR Apache-2.0).

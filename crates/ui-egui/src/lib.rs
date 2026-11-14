@@ -1,4 +1,4 @@
-//! The EffectCraft egui frontend (swappable): docking panels, the Composition viewer, the
+//! The crocwork Motion egui frontend (swappable): docking panels, the Composition viewer, the
 //! Timeline with property twirl-downs and keyframes, Effect Controls, Effects & Presets, Preview,
 //! Info, Character/Paragraph/Align, menus, dialogs and the control channel.
 //!
@@ -9,10 +9,13 @@
 
 pub(crate) mod a11y;
 
-/// EffectCraft as craft-update knows it, with its 128 px icon and accent colour: the update
+/// crocwork Motion as craft-update knows it, with its 128 px icon and accent colour: the update
 /// prompt shows both, and an AppImage's menu entry gets the icon.
 #[cfg(not(target_arch = "wasm32"))]
 pub const UPDATE_APP: craft_update::app::App = craft_update::app::App {
+    name: "crocwork Motion",
+    repo: "CROC101/crocwork-motion",
+    developer: "crocwork",
     icon_png: Some(include_bytes!("../../../assets/app-icon/hicolor/128x128/apps/ai.storyteller.effectcraft.png")),
     accent: Some([0xe0, 0x36, 0x8f]),
     ..craft_update::suite::EFFECTCRAFT
