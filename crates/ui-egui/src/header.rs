@@ -313,7 +313,7 @@ fn community_buttons(app: &mut EffectcraftApp, ui: &mut egui::Ui, p: &egui::Pain
     }
     rx = discord.min.x - 6.0;
     for (id, icon, tip, cmd) in
-        [("hdr-github", Icon::Code, "crocwork Motion on GitHub", "help.github"), ("hdr-web", Icon::Globe, "crocwork Motion on getartcraft.com", "help.appPage")]
+        [("hdr-github", Icon::Code, "crocwork Motion on GitHub", "help.github"), ("hdr-web", Icon::Globe, "crocwork Motion on github.com/CROC101/crocwork-motion", "help.appPage")]
     {
         let r = Rect::from_min_max(pos2(rx - 26.0, cy - 13.0), pos2(rx, cy + 13.0));
         if widgets::icon_button(ui, r, icon, false, &t, egui::Id::unique(id)).on_hover_text(tip).clicked() {
@@ -901,7 +901,7 @@ fn run_workspace_command(app: &mut EffectcraftApp, ui: &egui::Ui, id: &str) {
     }
 }
 
-/// The crocwork mark as supplied in `docs/brand` (the README's and getartcraft.com's logo; used
+/// The crocwork mark as supplied in `docs/brand` (the README's and github.com/CROC101/crocwork-motion's logo; used
 /// unmodified, see `docs/brand/LICENSE-brand.txt`).
 static ARTCRAFT_MARK: &[u8] = include_bytes!("../../../docs/brand/artcraft-mark.png");
 

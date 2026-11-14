@@ -18,7 +18,7 @@ either. Write for an artist, not a developer.
 - Link to other pages instead of repeating them. Use relative links to the `.md` file:
   `[Install crocwork Motion](../getting-started/install.md)`.
 - No marketing copy, no "simply", no claims you have not checked in the code, a release or an issue.
-- Call the product "crocwork Motion", as the app, its downloads and getartcraft.com do.
+- Call the product "crocwork Motion", as the app, its downloads and github.com/CROC101/crocwork-motion do.
 - Name UI labels exactly as the app shows them, in **bold**. Menu paths use the menu text from
   `crates/engine/src/menus.rs`.
 - Shortcuts: the code writes `Cmd`, which is Ctrl on Windows and Linux. Write Ctrl for Windows.

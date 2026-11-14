@@ -5,7 +5,7 @@ order: 10
 verified: 0.9.2
 ---
 
-The easiest way is the [crocwork Motion page on getartcraft.com](https://github.com/CROC101/crocwork-motion). For a specific file, use the [latest release](https://github.com/CROC101/crocwork-motion/releases/latest) on GitHub. In the file names, `<version>` stands for the version number, for example `0.9.2`.
+The easiest way is the [crocwork Motion page on github.com/CROC101/crocwork-motion](https://github.com/CROC101/crocwork-motion). For a specific file, use the [latest release](https://github.com/CROC101/crocwork-motion/releases/latest) on GitHub. In the file names, `<version>` stands for the version number, for example `0.9.2`.
 
 ## Windows 11
 

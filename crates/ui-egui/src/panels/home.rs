@@ -286,7 +286,7 @@ fn rail_ui(app: &mut EffectcraftApp, ui: &mut egui::Ui, p: &egui::Painter, rail:
     // Community links at the foot (below the pages when the window is short).
     let links = [
         (Icon::Chat, "Join the crocwork Discord", "help.discord"),
-        (Icon::Globe, "getartcraft.com", "help.website"),
+        (Icon::Globe, "github.com/CROC101/crocwork-motion", "help.website"),
         (Icon::Globe, "crocwork Motion home page", "help.appPage"),
         (Icon::Code, "crocwork Motion on GitHub", "help.github"),
     ];

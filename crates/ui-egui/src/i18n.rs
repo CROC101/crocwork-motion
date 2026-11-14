@@ -1728,7 +1728,7 @@ const SWEDISH: &[(&str, &str, &str)] = &[
     ("help.revealLogFile", "Reveal Logging File", "Visa loggfil"),
     ("help.discord", "Join the crocwork Discord...", "Gå med i crocwork på Discord..."),
     ("help.reportIssue", "Provide Feedback...", "Ge återkoppling..."),
-    ("help.website", "crocwork Website", "ArtCrafts webbplats"),
+    ("help.website", "crocwork Website", "crocwork webbplats"),
     ("help.appPage", "crocwork Motion Home Page", "EffectCrafts startsida"),
     ("help.github", "crocwork Motion on GitHub", "crocwork Motion på GitHub"),
     ("file.openDemoProject", "Open Demo Project", "Öppna demoprojekt"),
