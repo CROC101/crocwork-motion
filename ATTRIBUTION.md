@@ -140,7 +140,7 @@ configuration from these Apache-2.0 projects:
 ## First-party brand marks
 
 The crocwork name, wordmark and logos are trademarks of the crocwork Team. They are not open source and are not
-covered by the project licence; they may be used only unmodified and only as part of this repository and crocwork Motion,
+covered by the project licence; they may be used only unmodified and only as part of this repository and EffectCraft,
 under [`docs/brand/LICENSE-brand.txt`](docs/brand/LICENSE-brand.txt). Forks and modified versions must remove them
 (AGENTS.md §1.8).
 

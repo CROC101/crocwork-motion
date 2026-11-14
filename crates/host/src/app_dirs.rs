@@ -16,7 +16,7 @@ use std::path::{Path, PathBuf};
 use std::sync::OnceLock;
 
 /// Files beside the executable that switch on portable mode (either one; contents are ignored).
-pub const PORTABLE_MARKERS: [&str; 2] = ["portable.txt", "crocwork Motion.portable"];
+pub const PORTABLE_MARKERS: [&str; 2] = ["portable.txt", "EffectCraft.portable"];
 /// The data folder created beside the executable in portable mode.
 pub const PORTABLE_DATA_DIR: &str = "EffectCraftData";
 

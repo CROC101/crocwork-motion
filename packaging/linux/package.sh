@@ -128,7 +128,7 @@ if has appimage; then
     echo "no pinned AppImage runtime for $ARCH; build the AppImage on x86_64 or aarch64" >&2
     exit 2
   fi
-  APPDIR="$WORK/crocwork Motion.AppDir"
+  APPDIR="$WORK/EffectCraft.AppDir"
   cp -R "$STAGE" "$APPDIR"
   # Keep sctk-adwaita's MIT notice in the AppImage.
   install -Dm644 "$ROOT/NOTICE" "$APPDIR/usr/share/doc/effectcraft/NOTICE"

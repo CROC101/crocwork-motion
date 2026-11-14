@@ -117,7 +117,7 @@ echo "==> assembling $APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 # Executable and icon carry the display name (CFBundleExecutable / CFBundleIconFile).
 cp "$WORK/bin/effectcraft" "$APP/Contents/MacOS/crocwork Motion"
-cp "$ROOT/assets/app-icon/effectcraft.icns" "$APP/Contents/Resources/crocwork Motion.icns"
+cp "$ROOT/assets/app-icon/effectcraft.icns" "$APP/Contents/Resources/EffectCraft.icns"
 # Required embedded-font notices are independent of optional font inputs.
 cp "$ROOT/NOTICE" "$APP/Contents/Resources/NOTICE"
 sed -e "s/@VERSION@/$VERSION/g" -e "s/@SHORT_VERSION@/$SHORT_VERSION/g" \

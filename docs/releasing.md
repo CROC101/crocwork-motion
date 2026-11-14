@@ -75,7 +75,7 @@ an upgrade that keeps it, a repair, uninstall, and the all-users default folder 
 themselves are checked by hand.
 
 The portable zip ships [`portable.txt`](../packaging/windows/portable.txt) beside `effectcraft.exe`.
-That marker (or an `crocwork Motion.portable` file) switches on portable mode: the settings folder
+That marker (or an `EffectCraft.portable` file) switches on portable mode: the settings folder
 (preferences, shortcuts, recovery files, logs, plug-ins) becomes `EffectCraftData\` next to the
 exe instead of `%APPDATA%\crocwork Motion`. If that folder isn't writable the app logs a warning and
 uses `%APPDATA%`. The MSI has no marker. The logic is in `crates/host/src/app_dirs.rs` and works

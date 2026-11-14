@@ -27,7 +27,7 @@ trap { Write-Output "FAILED: $_"; exit 1 }
 $Root = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $AppPaths = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\effectcraft.exe'
 # A per-machine install's desktop is the Public one.
-$DesktopLink = Join-Path ([Environment]::GetFolderPath('CommonDesktopDirectory')) 'crocwork Motion.lnk'
+$DesktopLink = Join-Path ([Environment]::GetFolderPath('CommonDesktopDirectory')) 'EffectCraft.lnk'
 
 function Invoke-Native([string] $What, [scriptblock] $Block) {
   Write-Output "==> $What"

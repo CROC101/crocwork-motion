@@ -96,10 +96,10 @@ mod tests {
 
     #[test]
     fn exec_arguments_are_quoted_and_escaped() {
-        assert_eq!(exec_arg("/home/a/crocwork Motion.AppImage"), "\"/home/a/crocwork Motion.AppImage\"");
+        assert_eq!(exec_arg("/home/a/EffectCraft.AppImage"), "\"/home/a/EffectCraft.AppImage\"");
         assert_eq!(exec_arg("/a b/$x\"y`z\\w%"), "\"/a b/\\\\$x\\\\\"y\\\\`z\\\\\\\\w%%\"");
-        let e = entry("/opt/crocwork Motion.AppImage");
-        assert!(e.contains("Exec=\"/opt/crocwork Motion.AppImage\" %F\n") && e.contains("NoDisplay=true\n") && e.contains("Icon=ai.storyteller.effectcraft\n"));
+        let e = entry("/opt/EffectCraft.AppImage");
+        assert!(e.contains("Exec=\"/opt/EffectCraft.AppImage\" %F\n") && e.contains("NoDisplay=true\n") && e.contains("Icon=ai.storyteller.effectcraft\n"));
     }
 
     #[test]
@@ -110,22 +110,22 @@ mod tests {
         let entry_path = home.join("applications/ai.storyteller.effectcraft.desktop");
         let icon_path = home.join("icons/hicolor/256x256/apps/ai.storyteller.effectcraft.png");
         // First start: entry and icon written; again: nothing to do.
-        assert!(integrate("/a/crocwork Motion.AppImage", &home, std::slice::from_ref(&system), b"png").unwrap());
+        assert!(integrate("/a/EffectCraft.AppImage", &home, std::slice::from_ref(&system), b"png").unwrap());
         assert_eq!(std::fs::read(&icon_path).unwrap(), b"png");
-        assert!(std::fs::read_to_string(&entry_path).unwrap().contains("Exec=\"/a/crocwork Motion.AppImage\""));
-        assert!(!integrate("/a/crocwork Motion.AppImage", &home, std::slice::from_ref(&system), b"png").unwrap());
+        assert!(std::fs::read_to_string(&entry_path).unwrap().contains("Exec=\"/a/EffectCraft.AppImage\""));
+        assert!(!integrate("/a/EffectCraft.AppImage", &home, std::slice::from_ref(&system), b"png").unwrap());
         // The AppImage moved: the entry follows it.
-        assert!(integrate("/b/crocwork Motion.AppImage", &home, std::slice::from_ref(&system), b"png").unwrap());
-        assert!(std::fs::read_to_string(&entry_path).unwrap().contains("Exec=\"/b/crocwork Motion.AppImage\""));
+        assert!(integrate("/b/EffectCraft.AppImage", &home, std::slice::from_ref(&system), b"png").unwrap());
+        assert!(std::fs::read_to_string(&entry_path).unwrap().contains("Exec=\"/b/EffectCraft.AppImage\""));
         // The user's own entry is never replaced.
         std::fs::write(&entry_path, "[Desktop Entry]\nName=Mine\n").unwrap();
-        assert!(!integrate("/c/crocwork Motion.AppImage", &home, std::slice::from_ref(&system), b"png").unwrap());
+        assert!(!integrate("/c/EffectCraft.AppImage", &home, std::slice::from_ref(&system), b"png").unwrap());
         assert_eq!(std::fs::read_to_string(&entry_path).unwrap(), "[Desktop Entry]\nName=Mine\n");
         // An installed package provides the entry: nothing is written.
         let _ = std::fs::remove_dir_all(&home);
         std::fs::create_dir_all(system.join("applications")).unwrap();
         std::fs::write(system.join("applications/ai.storyteller.effectcraft.desktop"), "x").unwrap();
-        assert!(!integrate("/a/crocwork Motion.AppImage", &home, std::slice::from_ref(&system), b"png").unwrap());
+        assert!(!integrate("/a/EffectCraft.AppImage", &home, std::slice::from_ref(&system), b"png").unwrap());
         assert!(!entry_path.exists());
         let _ = std::fs::remove_dir_all(&root);
     }
